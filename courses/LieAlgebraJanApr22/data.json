@@ -1,0 +1,75 @@
+lectuenotes =
+[
+  {
+    "description":"Review of linear algebra",
+    "date":"Feb 25, 2022",
+    "links":
+    [
+      {
+        "dispname":"link",
+        "href":"https://drive.google.com/file/d/10y9aYXHXrfQYNVZyg-WjiqruBDOpW7B5/view?usp=sharing"
+      }
+    ]
+  },
+  {
+    "description":"qq",
+    "date":"",
+    "links":
+    [
+      {
+        "dispname":"link",
+        "href":""
+      }
+    ]
+  },
+  {
+    "description":"ww",
+    "date":"",
+    "links":
+    [
+      {
+        "dispname":"link",
+        "href":""
+      }
+    ]
+  },
+  {
+    "description":"ee",
+    "date":"",
+    "links":
+    [
+      {
+        "dispname":"link",
+        "href":""
+      }
+    ]
+  }
+]
+
+coursedetails =
+{
+  "course":
+  {
+    "name":"Semisimple Lie Algebra",
+    "semester":"Jan-Apr 2022"
+  },
+  "instructor":
+  {
+    "name":"S. S. Kannan",
+    "email":"kannan@cmi.ac.in"
+  },
+  "TA":
+  {
+    "name":"Somnath Dake",
+    "email":"somnath@cmi.ac.in"
+  },
+  "prerequisite":["Linear Algebra"],
+  "book":
+  {
+    "name":"Introduction to Lie Algebras and Representation Theory",
+    "author": "James E. Humphreys"
+  },
+  "syllabus":"",
+  "gradingpolicy":"",
+  "moreinfo":""
+}
