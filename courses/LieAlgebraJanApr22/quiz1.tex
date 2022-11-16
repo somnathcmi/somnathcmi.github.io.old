@@ -1,0 +1,68 @@
+\input{lib}
+
+\begin{document}
+\section{Quiz 1}
+\thmpara
+\begin{problem}
+    Prove that for any Lie algebra \(L\) over \(\IF\), \(ad: L \to gl(L)\) is homomorphism of Lie algebras.
+\end{problem}
+\begin{proof}
+    Recall \(ad:L \to gl(L)\) is defined by \(x \mapsto (ad(x):y \mapsto [x,y])\) for \(x,y \in L\). Let \(x,y,z\in L\) and \( a,b,c\in \IF\) be arbitrary elements.
+
+    1. Observe that \(ad(x) \in gl(L)\) using right linearity of bracket: 
+    \begin{align*}
+        ad(x)(by+cz) = [x,by+cz] = b[x,y]+c[x,z] = b\cdot ad(x)(y) + c \cdot ad(x)(z). 
+    \end{align*}
+    
+    2. Next we prove \(ad\) is linear using left linearity of bracket:
+    \begin{align*}
+        ad(ax+by)(z) = [ax+by,z] = a[x,z]+b[y,z] = a\cdot ad(x)(z) + b \cdot ad(y)(z). 
+    \end{align*}
+    Hence we have \(ad(ax+by) = a\cdot ad(x) + b \cdot ad(y)\).
+    
+    3. Lastly we want to show that \(ad\) preserves bracket:
+    \begin{align*}
+        ad([x,y])(z)&=[[x,y],z]=-[[y,z],x]-[[z,x],y]=[x,[y,z]]-[y,[x,z]]\\
+        &=ad(x)\big(ad(y)(z)\big) - ad(y)\big(ad(x)(z)\big) \\
+        &=\big(ad(x)\circ ad(y) - ad(y)\circ ad(x)\big)(z)\\
+        \therefore
+        ad([x,y]) &= [ad(x),ad(y)].
+    \end{align*}
+
+\end{proof}
+\begin{problem}
+    Give an example of Lie algebra \(L\) such that \(ad(L)\) is nonzero Lie subalgebra of \(sl(L)\).
+\end{problem}
+\begin{proof}[Examples]
+1. Let \(L=sl(2,\IC)\). Since \(sl(2,\IC)\) is simple and not abelian, we have \([L,L] = L\), hence \(gl(L)\supset ad(L) = ad([L,L])=[ad(L),ad(L)]\). This implies for any \(x \in ad(L)\) there are \(y,z \in ad(L)\) such that \(x = [y,z]\). Hence \(trace(x) = trace([y,z]) = 0\). We have \(ad(L)\subset sl(L)\). \(ad(L) \not= 0\) follows from \(L\) is not abelian.
+
+Alternate proof for \(L=sl(2,\IC)\). Basis of \(L\) is \(e_{11}-e_{22},e_{12},e_{21}\) in that order. Observe that 
+    \begin{align*}
+        ad(e_{11}-e_{22}) = 
+        \left(\begin{array}{ccc}
+            0 & 0 & 0\\
+            0 & 2 & 0\\
+            0 & 0 & -2
+        \end{array}\right),
+        ad(e_{12}) = 
+        \left(\begin{array}{ccc}
+            0 & 0 & 1\\
+            -2 & 0 & 0\\
+            0 & 0 & 0
+        \end{array}\right),
+        ad(e_{21}) = 
+        \left(\begin{array}{ccc}
+            0 & -1 & 0\\
+            0 & 0 & 0\\
+            2 & 0 & 0
+        \end{array}\right)
+    \end{align*}
+    Hence \(ad(L)\subset sl(L)\). 
+
+    2. For any simple Lie algebra \(L\) over char 0 field. Proof is similar to that of above.
+
+    3. Let \(L\) be nilpotent lie algebra then every element \(x \in ad(L)\) is ad-nilpotent. This implies all eigen values of \(ad(x)\) are 0. Understand all steps in between.
+
+    4. Let \(L=\IR^3\) with bracket defined by cross product. First prove that this is indeed Lie algebra by verifying all axioms. Second write matrices of \(ad(x)\) for all basis elements \(x\), and obeserve that trace of each of them is 0.
+\end{proof}
+\end{document}
